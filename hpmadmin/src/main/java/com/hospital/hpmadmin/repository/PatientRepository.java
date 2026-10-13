@@ -1,0 +1,19 @@
+package com.hospital.hpmadmin.repository;
+
+import com.hospital.hpmadmin.entity.Patient;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface PatientRepository extends JpaRepository<Patient, UUID> {
+
+    Optional<Patient> findByPatientNumber(String patientNumber);
+
+    boolean existsByPatientNumber(String patientNumber);
+
+    boolean existsByPatientNumberAndIdNot(
+            String patientNumber,
+            UUID id
+    );
+}

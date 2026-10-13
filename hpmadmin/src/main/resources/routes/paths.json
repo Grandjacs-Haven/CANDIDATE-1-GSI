@@ -1,0 +1,435 @@
+[
+  {
+    "path": "/api/v1/addresses",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "radd": ["GET"],
+      "cadd": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/addresses/*",
+    "scopes": {
+      "admin": ["GET", "PATCH", "DELETE"],
+      "radd": ["GET"],
+      "uadd": ["PATCH"],
+      "dadd": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/appointments",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "rapp": ["GET"],
+      "cappt": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/appointments/patients/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rapp": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/appointments/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "rapp": ["GET"],
+      "uappt": ["PUT"],
+      "dappt": ["DELETE"]
+    }
+  },
+
+  {
+    "path": "/api/v1/beds",
+    "scopes": {
+      "admin": ["GET"],
+      "rbed": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/beds/rooms/*",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "rbed": ["GET"],
+      "cbed": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/beds/*",
+    "scopes": {
+      "admin": ["GET", "DELETE"],
+      "rbed": ["GET"],
+      "dbed": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/beds/*/rooms/*",
+    "scopes": {
+      "admin": ["PUT"],
+      "ubed": ["PUT"]
+    }
+  },
+
+  {
+    "path": "/api/v1/billings/encounters/*/charge",
+    "scopes": {
+      "admin": ["POST"],
+      "cbill": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/billings/procedures/*/charge",
+    "scopes": {
+      "admin": ["POST"],
+      "cbill": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/billings/*",
+    "scopes": {
+      "admin": ["GET", "PUT"],
+      "rbill": ["GET"],
+      "ubill": ["PUT"],
+      "abill": ["PUT"]
+    }
+  },
+  {
+    "path": "/api/v1/billings/*/items",
+    "scopes": {
+      "admin": ["GET"],
+      "rbill": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/billings/patients/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rbill": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/billings/encounters/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rbill": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/clinical-notes",
+    "scopes": {
+      "admin": ["POST"],
+      "cnote": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/clinical-notes/patient/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rnote": ["GET"]
+    }
+  },
+
+  {
+    "path": "/api/v1/contacts",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "rcont": ["GET"],
+      "ccont": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/contacts/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "rcont": ["GET"],
+      "ucont": ["PUT"],
+      "dcont": ["DELETE"]
+    }
+  },
+
+  {
+    "path": "/api/v1/clinical-notes/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "rnote": ["GET"],
+      "unote": ["PUT"],
+      "dnote": ["DELETE"]
+    }
+  },
+
+  {
+    "path": "/api/v1/encounters",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "renc": ["GET"],
+      "cenc": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/encounters/by-appointments",
+    "scopes": {
+      "admin": ["GET"],
+      "renc": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/encounters/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "renc": ["GET"],
+      "uenc": ["PUT"],
+      "denc": ["DELETE"]
+    }
+  },
+
+  {
+    "path": "/api/v1/encounter-history/encounters/*/locations",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "reloc": ["GET"],
+      "celoc": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/encounter-history/encounter-locations",
+    "scopes": {
+      "admin": ["GET"],
+      "reloc": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/encounter-history/encounter-locations/*",
+    "scopes": {
+      "admin": ["GET", "DELETE"],
+      "reloc": ["GET"],
+      "deloc": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/encounter-history/encounter-locations/*/encounters/*",
+    "scopes": {
+      "admin": ["PUT"],
+      "ueloc": ["PUT"]
+    }
+  },
+  {
+    "path": "/api/v1/observation/encounters/*/observations",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "robs": ["GET"],
+      "cobs": ["POST"]
+    }
+  },
+
+  {
+    "path": "/api/v1/observation/encounters/**/observations",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "robs": ["GET"],
+      "cobs": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/observation/observations/*",
+    "scopes": {
+      "admin": ["GET", "PATCH", "DELETE"],
+      "robs": ["GET"],
+      "uobs": ["PATCH"],
+      "dobs": ["DELETE"]
+    }
+  },
+
+  {
+    "path": "/api/v1/observation/encounters/*",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "robs": ["GET"],
+      "cobs": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/patients",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "rpat": ["GET"],
+      "cpat": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/patients/number/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rpat": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/patients/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "PATCH", "DELETE"],
+      "rpat": ["GET"],
+      "upat": ["PUT", "PATCH"],
+      "dpat": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/practitioners/paged",
+    "scopes": {
+      "admin": ["GET"],
+      "rpract": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/practitioners/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "rpract": ["GET"],
+      "upract": ["PUT"],
+      "dpract": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/procedures",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "rproc": ["GET"],
+      "cproc": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/procedures/encounters/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rproc": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/procedures/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "rproc": ["GET"],
+      "uproc": ["PUT"],
+      "dproc": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/procedure-performers",
+    "scopes": {
+      "admin": ["POST"],
+      "cperf": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/procedure-performers/procedure/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rperf": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/procedure-performers/practitioner/*",
+    "scopes": {
+      "admin": ["GET"],
+      "rperf": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/procedure-performers/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "PATCH", "DELETE"],
+      "rperf": ["GET"],
+      "uperf": ["PUT", "PATCH"],
+      "dperf": ["DELETE"]
+    }
+  },
+
+  {
+    "path": "/api/v1/procedure-performers/*/role",
+    "scopes": {
+      "admin": ["PATCH"],
+      "uperf": ["PATCH"]
+    }
+  },
+  {
+    "path": "/api/v1/rooms",
+    "scopes": {
+      "admin": ["GET"],
+      "rroom": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/rooms/wards/*",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "rroom": ["GET"],
+      "croom": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/rooms/**",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "rroom": ["GET"],
+      "uroom": ["PUT"],
+      "droom": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/users",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "ruser": ["GET"],
+      "cuser": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/users/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "ruser": ["GET"],
+      "uuser": ["PUT"],
+      "duser": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/user-priviledge/privileges/available",
+    "scopes": {
+      "admin": ["GET"],
+      "rpriv": ["GET"]
+    }
+  },
+  {
+    "path": "/api/v1/user-priviledge/*/privileges",
+    "scopes": {
+      "admin": ["GET", "POST", "DELETE"],
+      "rpriv": ["GET"],
+      "cpriv": ["POST"],
+      "dpriv": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/user-priviledge/*/privileges/*",
+    "scopes": {
+      "admin": ["DELETE"],
+      "dpriv": ["DELETE"]
+    }
+  },
+  {
+    "path": "/api/v1/wards",
+    "scopes": {
+      "admin": ["GET", "POST"],
+      "rward": ["GET"],
+      "cward": ["POST"]
+    }
+  },
+  {
+    "path": "/api/v1/wards/*",
+    "scopes": {
+      "admin": ["GET", "PUT", "DELETE"],
+      "rward": ["GET"],
+      "uward": ["PUT"],
+      "dward": ["DELETE"]
+    }
+  }
+]
